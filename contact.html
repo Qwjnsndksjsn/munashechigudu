@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Munashe's Portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Contact Page -->
+    <div class="contact-page">
+        <header>
+            <div class="container">
+                <a href="#" class="logo">Munashe Chigudu <b>THE SKY IS NOT THE LIMIT</b></a>
+                <ul class="links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <form action="action_page.php" method="post" id="contact-form">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="image">
+                    <img src="https://i0.wp.com/plopdo.com/wp-content/uploads/2021/07/Screenshot-1.png?resize=1210%2C642&ssl=1" alt="Contact Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Page -->
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy;<span id="year"></span> <span>cmunashemiguel@gmail.com. All rights reserved.</span>
+        <p>cmunashemiguel@gmail.com</p>
+        <p>+48 452 887 666</p>
+    </div>
+    <!-- End Footer -->
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle form submission (optional JavaScript)
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Message sent successfully!');
+        });
+    </script>
+</body>
+</html>
